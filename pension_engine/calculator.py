@@ -42,6 +42,6 @@ def calculate_monthly_payout(claimant: PensionClaimant) -> float:
 
     # BUG: Penalty is added rather than subtracted from disbursement!
     # Flawed implementation:
-    final_disbursement = base_monthly + veteran_bonus + early_penalty
+    final_disbursement = base_monthly + veteran_bonus - early_penalty
 
     return round(final_disbursement, 2)
